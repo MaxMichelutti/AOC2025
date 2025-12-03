@@ -24,3 +24,8 @@ Luckily, the example already provides one occurrence of the edge case, so it was
 Unfortunately, I was unable to find a very fast approach to handle the edge case in part two, so I had
 to partially rely on brute force to check the ranges. Since the input did not
 contain extremely wide ranges, my laptop was able to handle the problem in milliseconds anyway.
+
+### Day 3
+
+Easiest problem of the bunch until now, had a lot of fun solving it with muy friends after a soccer match!
+I expected a far harder part two, but the A.O.C. creators had some mercy today.
