@@ -15,7 +15,7 @@ Feel free to use these solutions if you are stuck, but please, in the spirit of 
 ### Day 1
 
 Pretty simple problem allowing me to prepare a decently general structure for the days to come. It still
-took me quite some time and a couple of mistakes due to some edge cases though.
+took me quite some time and a couple of mistakes due to some edge cases, though.
 
 ### Day 2
 
@@ -23,11 +23,11 @@ Once again a relatively simple pair of problems, which hides a nasty edge case i
 Luckily, the example already provides one occurrence of the edge case, so it was easy to spot.
 Unfortunately, I was unable to find a very fast approach to handle the edge case in part two, so I had
 to partially rely on brute force to check the ranges. Since the input did not
-contain extremely wide ranges, my laptop was able to handle the problem in milliseconds anyway.
+contain extremely wide ranges, though, my laptop was still able to handle the problem in milliseconds.
 
 ### Day 3
 
-Easiest problem of the bunch until now, had a lot of fun solving it with muy friends after a soccer match!
+Easiest problem of the bunch until now, had a lot of fun solving it with my friends after a soccer match!<br>
 I expected a far harder part two, but the A.O.C. creators had some mercy today.
 
 ### Day 4
