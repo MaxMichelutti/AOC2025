@@ -29,3 +29,10 @@ contain extremely wide ranges, my laptop was able to handle the problem in milli
 
 Easiest problem of the bunch until now, had a lot of fun solving it with muy friends after a soccer match!
 I expected a far harder part two, but the A.O.C. creators had some mercy today.
+
+### Day 4
+
+Part two ended up being literally part one, just iterated multiple times. Kind of underwhelming since part one was already pretty easy.
+There could just have been a very small quirk that could have given the wrong answer to unexperienced programmers who may have removed 
+the paper rolls as they counted them (before ending each iteration). But I say <i>"could"</i> for a reason, and that reason is that it turns out this approach still gives the correct answer anyway, well, in part two at least.<br>
+This kinda makes part one harder than part two since removing paper rolls during computation of part one may give incorrect results for some, but modifying the original problem isn't really of any use in that part.
