@@ -36,3 +36,8 @@ Part two ended up being literally part one, just iterated multiple times. Kind o
 There could just have been a very small quirk that could have given the wrong answer to unexperienced programmers who may have removed 
 the paper rolls as they counted them (before ending each iteration). But I say <i>"could"</i> for a reason, and that reason is that it turns out this approach still gives the correct answer anyway, well, in part two at least.<br>
 This kinda makes part one harder than part two since removing paper rolls during computation of part one may give incorrect results for some, but modifying the original problem isn't really of any use in that part.
+
+### Day 5
+
+Part one was very easy, while part two starts to show how tough advent of code can be on some days. Merging the ranges into a single collection of ranges
+required a lot of thinking about all possible scenarios and some recursive thinking aswell. I personally handled it with 9 different cases, but maybe it could be handled with a few less. I also got the incorrect answer once due to a small mistake I made, which caused the collection of ranges to be partially wiped mid execution. The mistake was forgetting to reconnect a link, and was solved by adding line ```82``` in [problem.rs](day05/src/problem.rs). Had a lot of fun solving part two, while meeting some old friends!
