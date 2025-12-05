@@ -74,40 +74,25 @@ impl DatabaseMultiRange {
                 // do nothing (other is subrange ipf thois range)
                 return;
             }
-            loop {
-                if let Some(next) = self.next.take() {
-                    if other.end < next.range.start {
-                        // other range ends before start of next range
-                        self.range.end = other.end;
-                        self.next = Some(next);
-                        break;
-                    } else if other.end > next.range.end {
-                        // other range ends after this iteration of next => go recursively on next of next
-                        self.next = next.next;
-                    } else {
-                        // other range ends inside this iteration of next
-                        self.range.end = next.range.end;
-                        self.next = next.next;
-                        break;
-                    }
-                } else {
-                    // other range end s after last range
-                    self.range.end = other.end;
-                    break;
-                }
-            }
+            self.recursive_step(other);
         } else if self.range.contains(other.end) {
             // other range starts before this range, but ends inside this range
             self.range.start = other.start;
         } else if self.range.start > other.start {
-            // other range starts and ends before this range
-            let old = self.range;
-            self.range = other;
-            let mut created_range = DatabaseMultiRange::new(old);
-            if let Some(next) = self.next.take() {
-                created_range.next = Some(next);
+            if self.range.start > other.end {
+                // other range starts and ends before this range
+                let old = self.range;
+                self.range = other;
+                let mut created_range = DatabaseMultiRange::new(old);
+                if let Some(next) = self.next.take() {
+                    created_range.next = Some(next);
+                }
+                self.next = Some(Box::new(created_range))
+            } else {
+                // other is super range of this range
+                self.range.start = other.start;
+                self.recursive_step(other);
             }
-            self.next = Some(Box::new(created_range))
         } else if let Some(mut next) = self.next.take() {
             // starts after this range, merge with next if any
             next.merge(other);
@@ -115,6 +100,31 @@ impl DatabaseMultiRange {
         } else {
             // starts after this range and there is no next: append to tail
             self.next = Some(Box::new(DatabaseMultiRange::new(other)))
+        }
+    }
+
+    fn recursive_step(&mut self, other: DatabaseRange){
+        loop {
+            if let Some(next) = self.next.take() {
+                if other.end < next.range.start {
+                    // other range ends before start of next range
+                    self.range.end = other.end;
+                    self.next = Some(next);
+                    break;
+                } else if other.end > next.range.end {
+                    // other range ends after this iteration of next => go recursively on next of next
+                    self.next = next.next;
+                } else {
+                    // other range ends inside this iteration of next
+                    self.range.end = next.range.end;
+                    self.next = next.next;
+                    break;
+                }
+            } else {
+                // other range end s after last range
+                self.range.end = other.end;
+                break;
+            }
         }
     }
 }
