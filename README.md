@@ -40,4 +40,7 @@ This kinda makes part one harder than part two since removing paper rolls during
 ### Day 5
 
 Part one was very easy, while part two starts to show how tough advent of code can be on some days. Merging the ranges into a single collection of ranges
-required a lot of thinking about all possible scenarios and some recursive thinking aswell. I personally handled it with 9 different cases, but maybe it could be handled with a few less. I also got the incorrect answer once due to a small mistake I made, which caused the collection of ranges to be partially wiped mid execution. The mistake was forgetting to reconnect a link, and was solved by adding line ```82``` in [problem.rs](day05/src/problem.rs). Had a lot of fun solving part two, while meeting some old friends!
+required a lot of thinking about all possible scenarios and some recursive thinking aswell. I personally handled it with 9 different cases, but maybe it could be handled with a few less. I also got the incorrect answer once due to a small mistake I made, which caused the collection of ranges to be partially wiped mid execution. The mistake was forgetting to reconnect a link, and was solved by adding line ```82``` in [problem.rs](day05/src/problem.rs). Had a lot of fun solving part two, while meeting some old friends!<br>
+Turns out there is a bug in my code and me getting the solution was just dumb luck that a specific subcase did not happen. I may fix the code in the future, for now it is not a bug, it is a feature.<br>
+I indeed fixed my code. Anyway, congratulations to my friend Anna who came up with a far nicer solution than mine, which leverages a greedy approach
+with the idea of sorting the ranges by their starting point in order to easily combine them.
