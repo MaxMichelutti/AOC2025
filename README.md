@@ -43,4 +43,15 @@ Part one was very easy, while part two starts to show how tough advent of code c
 required a lot of thinking about all possible scenarios and some recursive thinking aswell. I personally handled it with 9 different cases, but maybe it could be handled with a few less. I also got the incorrect answer once due to a small mistake I made, which caused the collection of ranges to be partially wiped mid execution. The mistake was forgetting to reconnect a link, and was solved by adding line ```82``` in [problem.rs](day05/src/problem.rs). Had a lot of fun solving part two, while meeting some old friends!<br>
 Turns out there is a bug in my code and me getting the solution was just dumb luck that a specific subcase did not happen. I may fix the code in the future, for now it is not a bug, it is a feature.<br>
 I indeed fixed my code. Anyway, congratulations to my friend Anna who came up with a far nicer solution than mine, which leverages a greedy approach
-with the idea of sorting the ranges by their starting point in order to easily combine them.
+with the idea of sorting the ranges by their starting point in order to easily combine them.ù
+
+### Day 6
+
+I know this is a bit late, but I was busy skiing and getting sick in the last few days, so I am now catching up with AOC. 
+In the future I will try to do one problem a day, so I hope to finish with a 4 day delay if everything goes to plan.<br>
+Anyway, these are my thoughts on day 6.<br>
+Today (or 4 days ago to be precise) we got a pretty simple problem which was all about parsing the input in the correct way.
+Part 2 surprised me so much that I had to write a completely separate parser, since the one I used for part one could not be used for it.
+Anyway, once parsing was done the problem became a walk in the park, since all you need to do is adding or multiplying a small amount of numbers.<br>
+We are now halfway there with AOC, up to now the challenge was easier than expected, and I am looking forward to the challenges that the final half of days 
+will reserve!
