@@ -10,6 +10,12 @@ For this year, I plan to develop a decent Rust solution for each problem, since 
 
 Feel free to use these solutions if you are stuck, but please, in the spirit of the challenge, try to come up with a solution of your own before relying on someone else's.
 
+To run any of my solutions change the PATH constant inside the respective main to the path to your problem input and run cargo inside the respective day folder.
+```
+    cargo run
+```
+No particular dependencies should be required.
+
 ## My thoughts and comments on each day
 
 ### Day 1
