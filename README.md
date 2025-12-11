@@ -55,3 +55,9 @@ Part 2 surprised me so much that I had to write a completely separate parser, si
 Anyway, once parsing was done the problem became a walk in the park, since all you need to do is adding or multiplying a small amount of numbers.<br>
 We are now halfway there with AOC, up to now the challenge was easier than expected, and I am looking forward to the challenges that the final half of days 
 will reserve!
+
+### Day 7
+
+Not much to say on this one, once again a nice and easy problem, which I had a lot of fun drawing and updating the current status for.
+Rust came up really helpful thanks to its amazing enum system, allowing for a really well organized representation of the problem for both part one
+and part two.
