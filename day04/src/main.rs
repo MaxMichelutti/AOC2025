@@ -3,11 +3,18 @@ pub mod part_one;
 pub mod part_two;
 pub mod position;
 
-pub const PATH: &str = "input/input.txt";
+use std::env;
 
 fn main() {
+    let args: Vec<String> = env::args().skip(1).collect();
+    if args.len() != 1 {
+        eprintln!("Usage: cargo run -- <input_file_path>");
+        std::process::exit(1);
+    }
+    let path = &args[0];
+
     // get and parse input
-    let mut file = std::fs::File::open(PATH).expect("Failed to open input file");
+    let mut file = std::fs::File::open(path).expect("Failed to open input file");
     let mut parser = parser::Parser::new();
     let problem = parser.parse(&mut file).expect("Failed to parse input");
 

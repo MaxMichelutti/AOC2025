@@ -19,6 +19,6 @@ fn best_joltage(bank: &Bank) -> u64 {
         }
         accumulator = accumulator * 10 + u64::from(max_cycle);
     }
-    println!("Best joltage is {}", accumulator);
+    //println!("Best joltage is {}", accumulator);
     accumulator
 }

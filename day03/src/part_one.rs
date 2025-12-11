@@ -20,6 +20,6 @@ fn best_joltage(bank: &Bank) -> u8 {
         }
     }
     let res = max_decina * 10 + max_unita;
-    println!("Best joltage is {}", res);
+    //println!("Best joltage is {}", res);
     res
 }

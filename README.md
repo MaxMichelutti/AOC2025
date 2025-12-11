@@ -1,6 +1,6 @@
 # Advent of Code 2025
 
-This year we have a shorter than usual, 12-days advent of code.<br>
+This year we have a shorter than usual, 12-days [advent of code](https://adventofcode.com/2025).<br>
 
 I will be publishing my solutions here, but since I am very busy lately, I will likely finish later than December 12th.<br>
 
@@ -10,11 +10,11 @@ For this year, I plan to develop a decent Rust solution for each problem, since 
 
 Feel free to use these solutions if you are stuck, but please, in the spirit of the challenge, try to come up with a solution of your own before relying on someone else's.
 
-To run any of my solutions change the PATH constant inside the respective main to the path to your problem input and run cargo inside the respective day folder.
+To run any of my solutions run cargo inside the respective day folder.
 ```
-    cargo run
+    cargo run -- <PATH/TO/YOUR/INPUT/FILE>
 ```
-No particular dependencies should be required.
+No particular dependencies should be required outside of [cargo](https://rust-lang.org/tools/install/).
 
 ## My thoughts and comments on each day
 
