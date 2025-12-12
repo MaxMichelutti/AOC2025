@@ -1,6 +1,4 @@
 use crate::problem::Problem;
-use crate::problem::TachyonCell;
-
 pub struct Parser{
 
 }
@@ -19,28 +17,6 @@ impl Parser {
             .map_err(|_| "Failed to read input")?
             > 0
         {
-            let input_char = buffer[0] as char;
-            match input_char {
-                'S' | 's' => {
-                    if problem.cells.len() > 1 || has_source {
-                        return Err("Source cell can only be in the first row".to_string());
-                    }
-                    has_source = true;
-                    problem.add_cell_to_last_row(TachyonCell::Source);
-                }
-                '.' => {
-                    problem.add_cell_to_last_row(TachyonCell::Empty);
-                }
-                '^' => {
-                    problem.add_cell_to_last_row(TachyonCell::Splitter);
-                }
-                '\n' => {
-                    problem.new_row();
-                }
-                _ => {
-                    return Err("Unexpected character".to_string());
-                }
-            }
         }
         Ok(problem)
     }
