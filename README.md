@@ -67,3 +67,12 @@ will reserve!
 Not much to say on this one, once again a nice and easy problem, which I had a lot of fun drawing and updating the current status for.
 Rust came up really helpful thanks to its amazing enum system, allowing for a really well organized representation of the problem for both part one
 and part two.
+
+### Day 8
+
+Weird day in which part one was miles harder than part two. I was a bit annoyed at the fact that I felt that the problem statement for part one was a bit ambigous.
+If it was stated a bit better, maybe by showing the exact circuits of the example, I would have liked it better.
+Anyway, this is the first day that I introduce an external dependency to this project! That is, because today <u>disjoint sets</u> were very helpful, and I don't think there is a disjoint set implementation inside Rust std library. 
+So, I used [this](https://docs.rs/disjoint/latest/disjoint/) implementation, which worked very well.<br>
+To be fair, I am grateful that part two was quick and easy, because I was incredibly scared it would have been some twist to the Travelling Salesman Problem, and,
+as any computer science student would know, that is a very hard problem (so hard it is very likely that it will never be solved in polynomial time in its vanilla version). So, thank you for that, AOC.
