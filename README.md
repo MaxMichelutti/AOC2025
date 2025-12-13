@@ -76,3 +76,11 @@ Anyway, this is the first day that I introduce an external dependency to this pr
 So, I used [this](https://docs.rs/disjoint/latest/disjoint/) implementation, which worked very well.<br>
 To be fair, I am grateful that part two was quick and easy, because I was incredibly scared it would have been some twist to the Travelling Salesman Problem, and,
 as any computer science student would know, that is a very hard problem (so hard it is very likely that it will never be solved in polynomial time in its vanilla version). So, thank you for that, AOC.
+
+### Day 9
+
+Part one today was so quick, I did it in less than 5 minutes. Part two, however, required some thinking and some analysis of the given input.
+In fact, I was able to come up with a fast solution that works with most inputs, but not all, so if your does not work that may be the reason.
+I made the assumption that the problem never contains two adjacent lines, which would make the white spece between such lines 0, thus forcing
+me to ignore those lines and rethink the problem. After making this assumption, part two turned out to be nothing more than a couple verbose 
+comparisons between integers added to part one.
