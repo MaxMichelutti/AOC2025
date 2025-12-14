@@ -84,3 +84,25 @@ In fact, I was able to come up with a fast solution that works with most inputs,
 I made the assumption that the problem never contains two adjacent lines, which would make the white spece between such lines 0, thus forcing
 me to ignore those lines and rethink the problem. After making this assumption, part two turned out to be nothing more than a couple verbose 
 comparisons between integers added to part one.
+
+### Day 10
+
+I won't spend much time writing about part one since I was able to solve it relatively quickly with a simple DFS. Not the most efficient way to do it, but it works.<br>
+But part two, oh part two, how hard you were today!<br>
+I read the task and I instantly knew it was going to be hard. <br>
+As a first attempt, I tried to extend the DFS method used in part one, since the values in the problem did not look incredibly high. 
+However, while this worked flawlessly for the example, once I treid it on the actual input, my laptop was taking ages to even solve the first of the 200 machines.
+Watching that unffold, I instantly knew I had to improve my solution.<br>
+However, I was completely lost! <br>
+I though about a DP solution, but it simply would not even fit in RAM for some machines, so I discarded it.<br>
+So I looked online, and I read of some people treating the problem as if it was a system of linear equations, and that guided me towards my solution.<br>
+So... just convert the problem into a matrix and then solve the system, right?<br>
+Well, it was not as simple as it may look. I haven't manually solved problems of linear algebra for a while, so I was very rusty on the topic,
+and I had to relearn some concepts such as Gaussian elimination in order to even come up with a solution.<br>
+But the issues did not stop there: a solution is not enough for today's advent of code problem, which requires the best solution among all.
+While most of the machines had exactly one solution, some had an infinite amount, and I had to brute force some values for the free variables in order
+to find the best solution of all.<br>
+So, in the end, my solution takes around 30 seconds to run on my input, and most of the time is spent brute forcing the optimal values for the free variables.<br>
+In my opinion, today's problem was a little too hard, but I'm still happy I was able to solve it, and I'm grateful that it taught me some linear
+algebra concepts that I had completely forgotten.
+While at first it made me rage a bit, in the end it was a positive experience overall.
