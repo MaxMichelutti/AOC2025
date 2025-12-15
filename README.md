@@ -106,3 +106,10 @@ So, in the end, my solution takes around 30 seconds to run on my input, and most
 In my opinion, today's problem was a little too hard, but I'm still happy I was able to solve it, and I'm grateful that it taught me some linear
 algebra concepts that I had completely forgotten.
 While at first it made me rage a bit, in the end it was a positive experience overall.
+
+### Day 11
+
+Short story of why you should always double check that your problem is parsed correctly. Today I lost like 15 minutes just because I forgot to append to the problem the last line of the input. If it was not for that, I would have solved today's problem very quickly: I was very lucky that avoiding the easy brute force solution for part one, ended up payoing for part two, since all I had to do was re-use the same code with different start and end points. <br>
+My opinion on today's advent of code, is that it was overall easy, especially when compared with yesterday. 
+Graph theory knowledge was the key for a quick and fast solution.<br>
+Looking forward to tomorrow, which will be the last chapter of this adventure!

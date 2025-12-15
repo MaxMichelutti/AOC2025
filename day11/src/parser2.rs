@@ -1,12 +1,11 @@
-use crate::problem::Problem;
+use crate::problem::Problem2;
 
-#[derive(Debug, Clone, Eq, PartialEq, Copy)]
 enum ParserStatus {
     ReadingNode,
     ReadingNeighbours,
 }
 
-pub struct Parser {
+pub struct Parser{
     status: ParserStatus,
     current_string: String,
     current_node: String,
@@ -15,7 +14,7 @@ pub struct Parser {
 
 impl Parser {
     pub fn new() -> Self {
-        Parser {
+        Parser{
             current_node: String::new(),
             current_string: String::new(),
             current_node_outputs: Vec::new(),
@@ -23,8 +22,8 @@ impl Parser {
         }
     }
 
-    pub fn parse<R: std::io::Read>(&mut self, input: &mut R) -> Result<Problem, String> {
-        let mut problem = Problem::new();
+    pub fn parse<R: std::io::Read>(&mut self, input: &mut R) -> Result<Problem2, String> {
+        let mut problem = Problem2::new();
         let mut buffer = [0; 1];
         while input
             .read(&mut buffer)
@@ -62,13 +61,7 @@ impl Parser {
                             self.current_string.clear();
                         }
                         // Add node to problem
-                        problem.add_node(
-                            &self.current_node,
-                            self.current_node_outputs
-                                .iter()
-                                .map(|s| s.as_str())
-                                .collect(),
-                        );
+                        problem.add_node(&self.current_node, self.current_node_outputs.iter().map(|s| s.as_str()).collect());
                         // Reset for next node
                         self.current_node.clear();
                         self.current_node_outputs.clear();
@@ -77,29 +70,9 @@ impl Parser {
                         return Err("Unexpected newline while reading node name".to_string());
                     }
                 }
-                _ => {
-                    return Err(format!("Unexpected character: {}", input_char));
-                }
+                _ => {return Err(format!("Unexpected character: {}", input_char));}
             }
         }
-        if self.status == ParserStatus::ReadingNeighbours {
-            self.current_node_outputs.push(self.current_string.clone());
-            self.current_string.clear();
-            // Add last node to problem
-            problem.add_node(
-                &self.current_node,
-                self.current_node_outputs
-                    .iter()
-                    .map(|s| s.as_str())
-                    .collect(),
-            );
-        }
         Ok(problem)
-    }
-}
-
-impl Default for Parser {
-    fn default() -> Self {
-        Self::new()
     }
 }
