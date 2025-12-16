@@ -113,3 +113,9 @@ Short story of why you should always double check that your problem is parsed co
 My opinion on today's advent of code, is that it was overall easy, especially when compared with yesterday. 
 Graph theory knowledge was the key for a quick and fast solution.<br>
 Looking forward to tomorrow, which will be the last chapter of this adventure!
+
+### Day 12
+
+Gotta be honest, I was completely lost today. The problem was so hard that the only way I could think of solving it in the general case was to feed it to a powerful SMT solver and hope that such a tool could crack it. Luckily, before I started encoding the problem, I decided to try to exclude the instances that were undoubtedly impossible because the region was too small to host all required shapes no matter the position and orientation. That left me with about half the regions to check, and before starting the encoding procedure I decided to attempt to feed the amount of possible regions to the AOC website, since the shapes I was given kinda looked like they could fit optimally in a big rectangle. Big surprise: that amount was the actual solution for today!<br>
+There is no part two today since this is the last day of advent of code,
+and, as per tradition, the last star is given for free if all other stars are collected.<br>
